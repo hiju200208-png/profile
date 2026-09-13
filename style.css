@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0c0c0c;
+    color: #f5f5f5;
+    font-family: Arial, "Noto Sans KR", sans-serif;
+    overflow-x: hidden;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 7%;
+    background: rgba(12, 12, 12, 0.85);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+}
+
+nav a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: white;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 130px 8% 80px;
+}
+
+.hello {
+    color: #777;
+    letter-spacing: 5px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(70px, 13vw, 180px);
+    line-height: 0.9;
+    letter-spacing: -6px;
+}
+
+.hero h2 {
+    margin-top: 35px;
+    font-size: clamp(30px, 5vw, 65px);
+    color: #888;
+    font-weight: 400;
+}
+
+.hero-description {
+    margin-top: 40px;
+    color: #aaa;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+.button {
+    width: fit-content;
+    margin-top: 40px;
+    padding: 15px 0;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.section {
+    padding: 130px 8%;
+    border-top: 1px solid #242424;
+}
+
+.section-number {
+    color: #666;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.section > h2 {
+    font-size: clamp(45px, 7vw, 90px);
+    margin-bottom: 80px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+}
+
+.about-grid h3 {
+    font-size: clamp(40px, 5vw, 70px);
+    line-height: 1.2;
+}
+
+.about-text {
+    color: #aaa;
+    font-size: 18px;
+    line-height: 2;
+}
+
+.about-text p {
+    margin-bottom: 25px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project-card {
+    min-height: 350px;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    background: #151515;
+    border: 1px solid #252525;
+    transition: transform 0.3s, background 0.3s, opacity 0.8s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    background: #1b1b1b;
+}
+
+.project-card > span {
+    color: #666;
+    font-size: 13px;
+}
+
+.project-card h3 {
+    margin-top: auto;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.project-card p {
+    color: #999;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tags span {
+    padding: 7px 10px;
+    border: 1px solid #444;
+    border-radius: 20px;
+    color: #aaa;
+    font-size: 11px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skills span {
+    padding: 17px 25px;
+    border: 1px solid #444;
+    border-radius: 40px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.skills span:hover {
+    background: white;
+    color: black;
+}
+
+.learning {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 120px 8%;
+    border-top: 1px solid #242424;
+}
+
+.learning > p:first-child {
+    color: #666;
+    letter-spacing: 4px;
+    font-size: 13px;
+}
+
+.learning h2 {
+    margin-top: 20px;
+    font-size: clamp(80px, 15vw, 200px);
+    line-height: 0.8;
+    letter-spacing: -8px;
+}
+
+.learning-text {
+    margin-top: 50px;
+    color: #888;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 35px 8%;
+    border-top: 1px solid #242424;
+    color: #666;
+    font-size: 12px;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 800px) {
+    nav ul {
+        display: none;
+    }
+
+    .hero h1 {
+        letter-spacing: -3px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .learning h2 {
+        letter-spacing: -4px;
+    }
+}
