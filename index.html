@@ -19,14 +19,18 @@
 
     <main>
         <section class="hero">
-            <p class="hello">HELLO, I'M</p>
-            <h1>NO HEEJU</h1>
-            <h2>Educational Technology<br>& Developer</h2>
-            <p class="hero-description">
-                새로운 기술을 배우고<br>
-                직접 만들어보는 과정을 좋아합니다.
-            </p>
-            <a href="#about" class="button">MORE ABOUT ME ↓</a>
+            <div class="hero-copy">
+                <p class="hello">EDUCATIONAL TECHNOLOGY & DEVELOPER</p>
+                <h1>NO<br>HEEJU</h1>
+                <p class="hero-description">기술로 더 나은 배움의 경험을 만드는<br>개발자, 노희주입니다.</p>
+                <a href="#about" class="button">EXPLORE →</a>
+            </div>
+
+            <div class="hero-visual" aria-label="마우스 움직임에 반응하는 3D 행성">
+                <canvas id="three-canvas"></canvas>
+                <div class="orbit-copy">LEARN<br>BUILD<br>DEPLOY<br>GROW</div>
+                <div id="three-status" class="three-status">3D LOADING...</div>
+            </div>
         </section>
 
         <section id="about" class="section reveal">
@@ -46,42 +50,17 @@
             <p class="section-number">02</p>
             <h2>PROJECTS</h2>
             <div class="project-grid">
-                <article class="project-card reveal">
-                    <span>01</span>
-                    <h3>Integrated LMS</h3>
-                    <p>Django 기반의 교육 통합 플랫폼 개발 프로젝트</p>
-                    <div class="tags"><span>Django</span><span>PostgreSQL</span><span>Git</span></div>
-                </article>
-
-                <article class="project-card reveal">
-                    <span>02</span>
-                    <h3>Team Evaluation System</h3>
-                    <p>팀 평가와 동료 평가를 관리하는 평가 시스템 개발. 평가 대상 조회, 중복 평가 방지, 제출 상태 관리 및 점수 계산 기능을 구현했습니다.</p>
-                    <div class="tags"><span>Django</span><span>PostgreSQL</span><span>Team Project</span></div>
-                </article>
-
-                <article class="project-card reveal">
-                    <span>03</span>
-                    <h3>MOA</h3>
-                    <p>회원, 활동, 참여 기록 등을 관리하는 동아리 관리 서비스 DB 프로젝트</p>
-                    <div class="tags"><span>PostgreSQL</span><span>Database</span><span>SQL</span></div>
-                </article>
-
-                <article class="project-card reveal">
-                    <span>04</span>
-                    <h3>Expense Manager</h3>
-                    <p>개인 지출 데이터를 저장하고 분석하는 웹 기반 지출 관리 서비스</p>
-                    <div class="tags"><span>Python</span><span>Streamlit</span><span>PostgreSQL</span></div>
-                </article>
+                <article class="project-card reveal"><span>01</span><h3>Integrated LMS</h3><p>Django 기반의 교육 통합 플랫폼 개발 프로젝트</p><div class="tags"><span>Django</span><span>PostgreSQL</span><span>Git</span></div></article>
+                <article class="project-card reveal"><span>02</span><h3>Team Evaluation System</h3><p>팀 평가와 동료 평가를 관리하는 평가 시스템 개발. 평가 대상 조회, 중복 평가 방지, 제출 상태 관리 및 점수 계산 기능을 구현했습니다.</p><div class="tags"><span>Django</span><span>PostgreSQL</span><span>Team Project</span></div></article>
+                <article class="project-card reveal"><span>03</span><h3>MOA</h3><p>회원, 활동, 참여 기록 등을 관리하는 동아리 관리 서비스 DB 프로젝트</p><div class="tags"><span>PostgreSQL</span><span>Database</span><span>SQL</span></div></article>
+                <article class="project-card reveal"><span>04</span><h3>Expense Manager</h3><p>개인 지출 데이터를 저장하고 분석하는 웹 기반 지출 관리 서비스</p><div class="tags"><span>Python</span><span>Streamlit</span><span>PostgreSQL</span></div></article>
             </div>
         </section>
 
         <section id="skills" class="section reveal">
             <p class="section-number">03</p>
             <h2>SKILLS</h2>
-            <div class="skills">
-                <span>Python</span><span>Django</span><span>PostgreSQL</span><span>SQL</span><span>HTML</span><span>CSS</span><span>Git</span><span>GitHub</span><span>AWS</span>
-            </div>
+            <div class="skills"><span>Python</span><span>Django</span><span>PostgreSQL</span><span>SQL</span><span>HTML</span><span>CSS</span><span>Git</span><span>GitHub</span><span>AWS</span></div>
         </section>
 
         <section class="learning reveal">
@@ -92,6 +71,7 @@
     </main>
 
     <footer><p>NO HEEJU</p><p>© 2026 HEEJU</p></footer>
-    <script src="script.js"></script>
+
+    <script type="module" src="script.js"></script>
 </body>
 </html>
